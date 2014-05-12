@@ -44,7 +44,7 @@ function Start () {
 }
 
 function FixedUpdate () {
-	if(networkView.isMine){
+	//if(networkView.isMine){
 		//Speed berechnen
 		currentSpeed = (Mathf.PI * 2 * flWheelCollider.radius) * flWheelCollider.rpm * 60 / 1000;
 		currentSpeed = Mathf.Round(currentSpeed);
@@ -91,7 +91,7 @@ function FixedUpdate () {
 		
 		//Ohne Gas langsamer werden
 		slower();
-	}
+	//}
 }
 
 //Nach jedem Framewechsel
