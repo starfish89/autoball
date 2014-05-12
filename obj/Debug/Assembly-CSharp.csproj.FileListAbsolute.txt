@@ -1,0 +1,11 @@
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\Assembly-CSharp.dll
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\UnityEditor.dll
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\UnityEngine.dll
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\Mono.Cecil.dll
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\nunit.framework.dll
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\Unity.DataContract.dll
+E:\Dropbox\Autoball\Autoball\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Dropbox\Autoball\Autoball\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+E:\Dropbox\Autoball\Autoball\obj\Debug\Assembly-CSharp.dll
+E:\Dropbox\Autoball\Autoball\obj\Debug\Assembly-CSharp.pdb
