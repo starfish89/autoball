@@ -7,31 +7,31 @@ Direct3D:
     VRAM:     978 MB (via DXGI)
     Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.060 seconds
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.288 seconds
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-UnloadTime: 0.365372 ms
+UnloadTime: 0.929339 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 278.
-Total: 0.595783 ms (FindLiveObjects: 0.014881 ms CreateObjectMapping: 0.008210 ms MarkObjects: 0.157028 ms  DeleteObjects: 0.003592 ms)
+Total: 1.866377 ms (FindLiveObjects: 0.044132 ms CreateObjectMapping: 0.027710 ms MarkObjects: 0.476216 ms  DeleteObjects: 0.022066 ms)
 
 (0.0, -0.2, 0.0)
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-Platform assembly: C:\Users\Marco\Desktop\Autoball_Added Driving\test_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\UnityScript.Lang.dll (this message is harmless)
 Clean up a bit after server quit
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
