@@ -34,13 +34,12 @@ var rrWheel : Transform;
 var gearSpeed : int [];
 private var currentGear: int = 0;
 
-
 function Start () {
 	rigidbody.centerOfMass = CenterOfMass.localPosition;
 	Debug.Log(rigidbody.centerOfMass);
 	oldForwardFriction = frWheelCollider.forwardFriction.stiffness;
 	oldSidewaysFriction = frWheelCollider.sidewaysFriction.stiffness;
-	
+
 }
 
 function FixedUpdate () {
@@ -97,7 +96,7 @@ function FixedUpdate () {
 //Nach jedem Framewechsel
 function Update(){ 
 	RotateWheels();
-//	SteelWheels();
+	SteelWheels();
 }
 
 function RotateWheels(){
@@ -109,11 +108,11 @@ function RotateWheels(){
 
 }
 
-//function SteelWheels(){
-//	flWheel.localEulerAngles.y = flWheelCollider.steerAngle - flWheel.localEulerAngles.z;
-//	frWheel.localEulerAngles.y = frWheelCollider.steerAngle - frWheel.localEulerAngles.z;
-//	
-//}
+function SteelWheels(){
+	flWheel.localEulerAngles.z = flWheelCollider.steerAngle - flWheel.localEulerAngles.z;
+	frWheel.localEulerAngles.z = frWheelCollider.steerAngle - frWheel.localEulerAngles.z;
+	
+}
 
 function setCurrentGear(){
 	var gearNumber: int;

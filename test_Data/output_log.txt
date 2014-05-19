@@ -17,21 +17,29 @@ Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\As
 Loading C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.288 seconds
+- Completed reload, in  0.100 seconds
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-UnloadTime: 0.929339 ms
+UnloadTime: 0.914457 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 278.
-Total: 1.866377 ms (FindLiveObjects: 0.044132 ms CreateObjectMapping: 0.027710 ms MarkObjects: 0.476216 ms  DeleteObjects: 0.022066 ms)
+Total: 1.791966 ms (FindLiveObjects: 0.044645 ms CreateObjectMapping: 0.028737 ms MarkObjects: 0.451583 ms  DeleteObjects: 0.011802 ms)
 
 (0.0, -0.2, 0.0)
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
 Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+The connection request to 67.225.180.24:50005 failed. Are you sure the server can be connected to?
+ 
+(Filename:  Line: 645)
+
+Failed to connect to master server at 67.225.180.24:23466
+ 
+(Filename:  Line: 227)
+
 Clean up a bit after server quit
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)

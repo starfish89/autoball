@@ -1,0 +1,64 @@
+Initialize engine version: 4.3.4f1 (e444f76e01cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.286]
+    Renderer: NVIDIA GeForce GT 540M (Microsoft Corporation - WDDM v1.2)                                                                     
+    Vendor:   NVIDIA
+    VRAM:     978 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.048 seconds
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Failed to connect to master server at 67.225.180.24:23466
+ 
+(Filename:  Line: 227)
+
+FailedToConnect to MasterServer info:ConnectionFailed
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+The connection request to 67.225.180.24:50005 failed. Are you sure the server can be connected to?
+ 
+(Filename:  Line: 645)
+
+FailedToConnect info:ConnectionFailed
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Failed to connect to master server at 67.225.180.24:23466
+ 
+(Filename:  Line: 227)
+
+FailedToConnect to MasterServer info:ConnectionFailed
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.887259 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 387.
+Total: 1.797098 ms (FindLiveObjects: 0.055934 ms CreateObjectMapping: 0.032329 ms MarkObjects: 0.472110 ms  DeleteObjects: 0.011802 ms)
+
+(0.0, -0.2, 0.0)
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\test2_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+UnloadTime: 1.290092 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 113 unused Assets to reduce memory usage. Loaded Objects now: 232.
+Total: 2.016732 ms (FindLiveObjects: 0.043105 ms CreateObjectMapping: 0.030789 ms MarkObjects: 0.451583 ms  DeleteObjects: 0.355622 ms)
+
