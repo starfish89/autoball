@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\gui\guiMainMenu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\spawnScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\RotateScript.cs" Line="8" Column="46" />
-      <File FileName="Assets\Scripts\gui\guiMainMenu.cs" Line="227" Column="65" />
+      <File FileName="Assets\ball.cs" Line="17" Column="71" />
+      <File FileName="Assets\Scripts\spawnScript.cs" Line="49" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

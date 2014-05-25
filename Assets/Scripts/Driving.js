@@ -46,6 +46,13 @@ function Start () {
 
 function FixedUpdate () {
 	if(networkView.isMine){
+	
+		if(Input.GetKeyUp("r")){
+			
+			transform.position = Vector3(0,1,0);
+			transform.rotation = Quaternion.identity;
+		}
+	
 		//Speed berechnen
 		currentSpeed = (Mathf.PI * 2 * flWheelCollider.radius) * flWheelCollider.rpm * 60 / 1000;
 		currentSpeed = Mathf.Round(currentSpeed);

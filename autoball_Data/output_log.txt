@@ -17,7 +17,7 @@ Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\
 Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.078 seconds
+- Completed reload, in  0.068 seconds
 desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -25,3 +25,49 @@ sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
+Connecting to 127.0.0.1:6666
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+The tree Weeds_02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Shrub_03 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+UnloadTime: 0.474454 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 479.
+Total: 1.987721 ms (FindLiveObjects: 0.025921 ms CreateObjectMapping: 0.014765 ms MarkObjects: 0.215243 ms  DeleteObjects: 0.923315 ms)
+
+Receiving state for an object whose network view exists but the observed object no longer exists
+ 
+(Filename:  Line: 315)
+
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+The server has disconnected from the client. Most likely the server has shut down.
+ 
+(Filename:  Line: 740)
+
+Clean up a bit after server quit
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Couldn't send RPC function '__RPCNetworkDestroy'
+
+ 
+(Filename:  Line: 2458)
+
+UnloadTime: 3.215856 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 479.
+Total: 1.534266 ms (FindLiveObjects: 0.025592 ms CreateObjectMapping: 0.019686 ms MarkObjects: 0.280866 ms  DeleteObjects: 0.066607 ms)
+
+Can't send RPC function since no connection was started.
+ 
+(Filename:  Line: 2458)
+

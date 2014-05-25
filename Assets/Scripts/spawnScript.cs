@@ -11,22 +11,23 @@ public class spawnScript : MonoBehaviour {
 	List<Vector3> spawnPointListA = new List<Vector3>();
 	List<Vector3> spawnPointListB = new List<Vector3>();
 
-	public Vector3 ballPosition = new Vector3(10,100,0);
+	private Vector3 ballPosition = new Vector3(0,20,0);
 
 	// Use this for initialization
 	void Start () {
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void Awake(){
 	
 	}
-	
+
+	void Update(){
+		if(Input.GetKeyUp("e")){
+			Transform ball = (Transform)Network.Instantiate(ballPrefab, ballPosition, Quaternion.identity, 0);
+		}
+	}
+
 	public void OnLevelWasLoaded(int level) {
 
 		if(Network.isServer){
@@ -45,7 +46,7 @@ public class spawnScript : MonoBehaviour {
 			}
 
 			spawn (new Vector3(10,1,0));
-			Transform ball = (Transform)Network.Instantiate(ballPrefab, new Vector3(20,20,0), Quaternion.identity, 0);
+			Transform ball = (Transform)Network.Instantiate(ballPrefab, ballPosition, Quaternion.identity, 0);
 
 		} else {
 			networkView.RPC("playerConnected", RPCMode.Server, Network.player);
@@ -59,7 +60,6 @@ public class spawnScript : MonoBehaviour {
 
 	[RPC]
 	public void spawn(Vector3 position){
-		Debug.Log ("jo" + position.x);
 		Transform myNewTrans = (Transform)Network.Instantiate(playerPrefab, position, transform.rotation, 0);		
 		follow f = (follow)cam.GetComponent("follow");
 		f.target = myNewTrans;
