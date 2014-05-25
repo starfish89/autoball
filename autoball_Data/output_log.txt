@@ -1,27 +1,26 @@
 Initialize engine version: 4.3.4f1 (e444f76e01cd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.2049]
+    Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.3523]
     Renderer: NVIDIA GeForce GTX 560 Ti 
     Vendor:   NVIDIA
-    VRAM:     1233 MB (via DXGI)
+    VRAM:     1226 MB (via DXGI)
     Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
 Begin MonoManager ReloadAssembly
-Platform assembly: E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.088 seconds
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.074 seconds
 desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
@@ -29,21 +28,29 @@ Connecting to 127.0.0.1:6666
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 0.581413 ms
+The tree Weeds_02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+The tree Shrub_03 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+ 
+(Filename:  Line: 79)
+
+UnloadTime: 0.476095 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 275.
-Total: 1.334757 ms (FindLiveObjects: 0.027561 ms CreateObjectMapping: 0.015421 ms MarkObjects: 0.244443 ms  DeleteObjects: 0.005249 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 431.
+Total: 2.091405 ms (FindLiveObjects: 0.022968 ms CreateObjectMapping: 0.013780 ms MarkObjects: 0.176525 ms  DeleteObjects: 1.017156 ms)
 
-(0.0, 0.0, 0.0)
+Receiving state for an object whose network view exists but the observed object no longer exists
+ 
+(Filename:  Line: 315)
+
+jo-10
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-(0.0, 0.0, 0.0)
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-Platform assembly: E:\Dropbox\Autoball\Autoball_Added Driving\autoball_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityScript.Lang.dll (this message is harmless)
 The server has disconnected from the client. Most likely the server has shut down.
  
 (Filename:  Line: 740)
@@ -57,13 +64,13 @@ Couldn't send RPC function '__RPCNetworkDestroy'
  
 (Filename:  Line: 2458)
 
-UnloadTime: 0.528259 ms
+UnloadTime: 2.487768 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 271.
-Total: 0.838325 ms (FindLiveObjects: 0.013124 ms CreateObjectMapping: 0.012140 ms MarkObjects: 0.149946 ms  DeleteObjects: 0.004921 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 432.
+Total: 1.053577 ms (FindLiveObjects: 0.015749 ms CreateObjectMapping: 0.016077 ms MarkObjects: 0.189650 ms  DeleteObjects: 0.050529 ms)
 
-Failed Network.Instantiate because we are not connected.
+Can't send RPC function since no connection was started.
  
 (Filename:  Line: 2458)
 

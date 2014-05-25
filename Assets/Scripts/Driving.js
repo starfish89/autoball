@@ -19,6 +19,9 @@ private var newSidewaysFriction : float = 0.01;
 private var stopForwardFriction : float = 1;
 private var stopSidewaysFriction : float = 1;
 
+private var readNetworkPos : Vector3 = new Vector3().zero;
+private var readNetworkRot : Quaternion;
+
 var CenterOfMass : Transform;
 //Tacho
 var GuiSpeedPointer : Texture2D;
@@ -36,14 +39,13 @@ private var currentGear: int = 0;
 
 function Start () {
 	rigidbody.centerOfMass = CenterOfMass.localPosition;
-	Debug.Log(rigidbody.centerOfMass);
 	oldForwardFriction = frWheelCollider.forwardFriction.stiffness;
 	oldSidewaysFriction = frWheelCollider.sidewaysFriction.stiffness;
 
 }
 
 function FixedUpdate () {
-	//if(networkView.isMine){
+	if(networkView.isMine){
 		//Speed berechnen
 		currentSpeed = (Mathf.PI * 2 * flWheelCollider.radius) * flWheelCollider.rpm * 60 / 1000;
 		currentSpeed = Mathf.Round(currentSpeed);
@@ -90,7 +92,10 @@ function FixedUpdate () {
 		
 		//Ohne Gas langsamer werden
 		slower();
-	//}
+	} else {
+		transform.position = Vector3.Lerp( transform.position, readNetworkPos, 10f * Time.deltaTime );
+		transform.rotation = Quaternion.Slerp(transform.rotation, readNetworkRot, 10f * Time.deltaTime);
+	}
 }
 
 //Nach jedem Framewechsel
@@ -194,12 +199,38 @@ function slower (){
 function OnGUI() {
 	var pointerPosition : float = 40.0;
 	
-	GUI.Box(Rect(0.0,0.0,140.0,140.0),GuiSpeedDisplay);
+	GUI.Box(Rect(0.0,Screen.height-140,140.0,140.0),GuiSpeedDisplay);
 	//Tacho malen und dann Koordinatensystem drehen.
 	if(currentSpeed > 0){
 		pointerPosition = currentSpeed + 40;
 	}
-	GUIUtility.RotateAroundPivot(pointerPosition,Vector2(70,70));
-	GUI.DrawTexture(Rect(0.0,0.0,140.0,140.0),GuiSpeedPointer,ScaleMode.StretchToFill,true,0);
+	GUIUtility.RotateAroundPivot(pointerPosition,Vector2(70,Screen.height-70));
+	GUI.DrawTexture(Rect(0.0,Screen.height-140,140.0,140.0),GuiSpeedPointer,ScaleMode.StretchToFill,true,0);
 	
 }
+
+
+//Hier werden alle Daten über das Netzwerk gesendet
+function OnSerializeNetworkView( stream : BitStream )
+  {
+  	var pos : Vector3;
+  	var rot : Quaternion;
+    // writing information, push current paddle position
+    if( stream.isWriting )
+    {
+      pos = transform.position;
+      rot = transform.rotation;
+      stream.Serialize( pos );
+      stream.Serialize( rot );
+    }
+    // reading information, read paddle position
+    else
+    {
+      pos = Vector3.zero;
+      rot = Quaternion.identity;
+      stream.Serialize( pos );
+      stream.Serialize( rot );
+      readNetworkPos = pos;
+      readNetworkRot = rot;
+    }
+  }

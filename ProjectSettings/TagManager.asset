@@ -3,6 +3,8 @@
 --- !u!78 &1
 TagManager:
   tags:
+  - spawnPointA
+  - spawnPointB
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
