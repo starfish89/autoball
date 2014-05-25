@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Driving.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\screenshot.cs">
     <Files>
-      <File FileName="Assets\Scripts\Driving.js" Line="219" Column="27" />
-      <File FileName="Assets\Scripts\spawnScript.cs" Line="75" Column="1" />
+      <File FileName="Assets\screenshot.cs" Line="15" Column="1" />
+      <File FileName="Assets\screenshot.cs" Line="9" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -49,11 +49,12 @@
      <Compile Include="Assets\Scripts\PlayerNode.cs" />
      <Compile Include="Assets\Scripts\RotateScript.cs" />
      <Compile Include="Assets\Scripts\follow.cs" />
-     <Compile Include="Assets\Scripts\gameMenu.cs" />
+     <Compile Include="Assets\Scripts\gui\gameMenu.cs" />
      <Compile Include="Assets\Scripts\gui\guiMainMenu.cs" />
      <Compile Include="Assets\Scripts\multiPlayerScript.cs" />
      <Compile Include="Assets\Scripts\spawnScript.cs" />
      <Compile Include="Assets\ball.cs" />
+     <Compile Include="Assets\screenshot.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>

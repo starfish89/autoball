@@ -708,12 +708,12 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .5
+  m_Intensity: .600000024
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_Strength: 1
     m_Bias: .0500000007
@@ -739,8 +739,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068378809}
-  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381661, w: .875426114}
-  m_LocalPosition: {x: 75.9057159, y: 123.40538, z: -64.7271118}
+  m_LocalRotation: {x: .66164279, y: 0, z: 0, w: .749819279}
+  m_LocalPosition: {x: -36.6009674, y: 61.4237061, z: 63.3947411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -935,6 +935,7 @@ GameObject:
   - 92: {fileID: 1311424670}
   - 81: {fileID: 1311424669}
   - 114: {fileID: 1311424668}
+  - 114: {fileID: 1311424673}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1014,11 +1015,22 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311424666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.81866789, y: 5.39787579, z: -18.5219746}
+  m_LocalRotation: {x: .183012709, y: -.683012724, z: .183012709, w: .683012724}
+  m_LocalPosition: {x: 70.8786545, y: 32.0491638, z: 1.18780899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1311424673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311424666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c98c88c455ffc4abe7e2dfb0a56708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366901049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1688194166
 Transform:
   m_ObjectHideFlags: 0
@@ -1306,6 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54bac993a9a7394fb3faa2303417d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skin: {fileID: 11400000, guid: 25d43928519fd3d48a16515d345867b4, type: 2}
 --- !u!4 &1796056592
 Transform:
   m_ObjectHideFlags: 0

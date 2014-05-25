@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class guiMainMenu : MonoBehaviour {
 
 	public GUISkin menuSkin ;
+	public GUISkin largeFont;
     private multiPlayerScript multiPlayer;
 
 	private enum states : int { main, host, join, gameLobby};
@@ -21,7 +22,6 @@ public class guiMainMenu : MonoBehaviour {
 	private string connectIp = "127.0.0.1";
 	private int hostPort = 6666;
 	private int playerCount = 8;
-
 
 	private int windowWidth = 600;
 	private int windowHeight = 300;
@@ -87,7 +87,9 @@ public class guiMainMenu : MonoBehaviour {
 			break;
 		}
 
+		GUI.skin = largeFont;
 
+		GUI.Label(new Rect ((Screen.width)/2 -(Screen.width)/4,0,(Screen.width)/2,(Screen.height)/4), "Autoball");
 	}
 	/// <summary>
 	/// Draws the main menu.
@@ -120,7 +122,7 @@ public class guiMainMenu : MonoBehaviour {
 	private void drawHostMenu(int windowID)
 	{
 		GUILayout.BeginHorizontal();
-		GUILayout.Label("Player Name:", GUILayout.Width(100));
+		GUILayout.Label("Player Name:", GUILayout.Width(150));
 		playerName = GUILayout.TextField(playerName);
 		GUILayout.EndHorizontal();
 
@@ -129,26 +131,27 @@ public class guiMainMenu : MonoBehaviour {
 		}
 		
 		GUILayout.BeginHorizontal();
-		GUILayout.Label("Game Name:", GUILayout.Width(100));
+		GUILayout.Label("Game Name:", GUILayout.Width(150));
 		hostGameName = GUILayout.TextField(hostGameName);
 		GUILayout.EndHorizontal();
 
 		GUILayout.BeginHorizontal();
-		GUILayout.Label("Players:", GUILayout.Width(100));
+		GUILayout.Label("Players:", GUILayout.Width(150));
 		playerCount = Convert.ToInt16(GUILayout.TextField(playerCount.ToString()));
 		GUILayout.EndHorizontal();
 
 		GUILayout.BeginHorizontal();
-		GUILayout.Label("Map:", GUILayout.Width(100));
+		GUILayout.Label("Map:", GUILayout.Width(150));
 
 		GUILayout.EndHorizontal();
 
-		GUILayout.FlexibleSpace();
+		GUILayout.Space(50);
+		//GUILayout.FlexibleSpace();
 
-		if(GUILayout.Button("Host")){
+		if(GUILayout.Button("Host", GUILayout.ExpandHeight(true))){
 			multiPlayer.startHost(playerCount, hostPort, playerName);
 		}
-		if(GUILayout.Button("Back")){
+		if(GUILayout.Button("Back", GUILayout.ExpandHeight(true))){
 			state = (int)states.main;
 		}
 	}
@@ -164,7 +167,7 @@ public class guiMainMenu : MonoBehaviour {
 
 		GUILayout.BeginHorizontal();
 			
-		GUILayout.Label("Player Name:", GUILayout.Width(130));
+		GUILayout.Label("Player Name:", GUILayout.Width(150));
 		playerName =  GUILayout.TextField(playerName);
 
 		if(GUI.changed){
@@ -175,7 +178,7 @@ public class guiMainMenu : MonoBehaviour {
 
 		GUILayout.BeginHorizontal();
 
-		GUILayout.Label("Direct Connection:", GUILayout.Width(130));
+		GUILayout.Label("Direct Connection:", GUILayout.Width(150));
 		connectIp = GUILayout.TextField(connectIp);
 		if(GUILayout.Button("Connect")){
 			multiPlayer.connect(connectIp, playerName);
@@ -219,13 +222,13 @@ public class guiMainMenu : MonoBehaviour {
 		GUILayout.EndScrollView ();
 
 
-		GUILayout.FlexibleSpace();
+		GUILayout.Space(50);
 
-		if (GUILayout.Button ("Refresh")){
+		if (GUILayout.Button ("Refresh", GUILayout.ExpandHeight(true))){
 			multiPlayer.requestHost();	
 		}
 
-		if (GUILayout.Button("Back")){
+		if (GUILayout.Button("Back", GUILayout.ExpandHeight(true))){
         	state = (int)states.main;
         }
 
@@ -235,25 +238,25 @@ public class guiMainMenu : MonoBehaviour {
 
 
 	private void drawGameLobby(int windowID){
-		
-		GUILayout.BeginHorizontal();
-		GUILayout.Label("Game Name:", GUILayout.Width(100));
-		GUILayout.EndHorizontal();
 
+		GUILayout.BeginVertical();
+
+		GUILayout.BeginHorizontal();
+		GUILayout.Label("Game Name:", GUILayout.Width(150));
+		GUILayout.EndHorizontal();
 
 		scrollPosition = GUILayout.BeginScrollView (scrollPosition);
 
-		GUILayout.Label("Players:");
+		GUI.Box (new Rect(50,20,500,200), "Players");
 
-		GUILayout.Space(20);
 		if(multiPlayer.playerList.Count>=1){
-			
-			
+
+			GUILayout.Space (50);
 			foreach (PlayerNode element in multiPlayer.playerList)
 			{
 				
 				GUILayout.BeginHorizontal();
-				GUILayout.Space(50);
+				GUILayout.Space(100);
 				GUILayout.Label(element.playerName);
 				GUILayout.EndHorizontal();	
 			}
@@ -262,12 +265,14 @@ public class guiMainMenu : MonoBehaviour {
 		}		
 		GUILayout.EndScrollView ();
 
+		GUILayout.FlexibleSpace();
+
 		if(Network.isServer){
-			if(GUILayout.Button("Start")){
+			if(GUILayout.Button("Start", GUILayout.ExpandHeight(true))){
 				multiPlayer.loadLevel();
 			}
 
-		if(GUILayout.Button("Back")){
+			if(GUILayout.Button("Back", GUILayout.ExpandHeight(true))){
 			if(Network.isClient){
 				multiPlayer.disconnect();
 			} else {
@@ -278,6 +283,7 @@ public class guiMainMenu : MonoBehaviour {
 
 	
 		}
-	
+
+		GUILayout.EndVertical();
 	}
 }
