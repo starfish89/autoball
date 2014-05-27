@@ -113,16 +113,16 @@ function Update(){
 
 function RotateWheels(){
 	//Räder drehen
-	flWheel.Rotate(flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
-	frWheel.Rotate(-1*flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
-	rlWheel.Rotate(flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
-	rrWheel.Rotate(-1*flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
-
+	//flWheel.Rotate(flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
+	flWheel.localEulerAngles.x = flWheel.localEulerAngles.x + flWheelCollider.rpm * Time.deltaTime;
+	//frWheel.Rotate(-1*flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
+	//rlWheel.Rotate(flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
+	//rrWheel.Rotate(-1*flWheelCollider.rpm / 60 * 360 * Time.deltaTime,0,0);
 }
 
 function SteelWheels(){
-	flWheel.localEulerAngles.z = flWheelCollider.steerAngle - flWheel.localEulerAngles.z;
-	frWheel.localEulerAngles.z = frWheelCollider.steerAngle - frWheel.localEulerAngles.z;
+	flWheel.localEulerAngles.z = flWheelCollider.steerAngle - flWheel.localEulerAngles.y;
+	frWheel.localEulerAngles.z = frWheelCollider.steerAngle - frWheel.localEulerAngles.y;
 	
 }
 
