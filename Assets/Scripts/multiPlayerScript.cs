@@ -9,13 +9,16 @@ public class multiPlayerScript : MonoBehaviour {
 	public int serverPort =  6666;
 	private string playerName = "";
 	public HostData[] hostData = new HostData[0];
-	
-	public List<PlayerNode> playerList = new List<PlayerNode>();
+
+	public multiPlayerManager mpm;
+
+
 	private int lastLevelPrefix = 0;
 	public bool nowConnecting = false;
 
 	public void Awake(){
 		requestHost();
+		mpm = (multiPlayerManager) GameObject.FindGameObjectWithTag("mp").GetComponent("multiPlayerManager");
 	}
 
 	public void requestHost(){
@@ -53,16 +56,16 @@ public class multiPlayerScript : MonoBehaviour {
 		Network.Connect(ip, serverPort);		
 		nowConnecting=true;	
 	}
-	
+
 	public void disconnect(){
 		Network.Disconnect();
-		playerList.Clear();
+		mpm.playerList.Clear();
 	}
 
 	public void disconnectServer(){
 		Network.Disconnect();
 		MasterServer.UnregisterHost();
-		playerList.Clear();
+		mpm.playerList.Clear();
 	}
 
 	public void fetchHostList(){
@@ -78,13 +81,9 @@ public class multiPlayerScript : MonoBehaviour {
 		}
 	}
 
-
-
-
-
-
+	
 	public PlayerNode GetPlayerNode(NetworkPlayer networkPlayer){
-		foreach(PlayerNode entry in playerList){
+		foreach(PlayerNode entry in mpm.playerList){
 			if(entry.networkPlayer==networkPlayer){
 				return entry;
 			}
@@ -92,61 +91,60 @@ public class multiPlayerScript : MonoBehaviour {
 		Debug.LogError("GetPlayerNode: Requested a playernode of non-existing player!");
 		return null;
 	}
-	
-
-	[RPC]
-	public void sendPlayerName(string name, NetworkMessageInfo info){
-		PlayerNode newEntry = new PlayerNode(name, info.sender);
-		playerList.Add(newEntry);
-	}
-
-	
+		
 	public void loadLevel(){
 		networkView.RPC( "loadNetworkLevel", RPCMode.All, "TestLevel", lastLevelPrefix + 1);
 	}
 	
 	[RPC]
 	public void loadNetworkLevel(string level, int levelPrefix){
-		
+
 		lastLevelPrefix = levelPrefix;
-		/*
-		// There is no reason to send any more data over the network on the default channel,
-		// because we are about to load the level, thus all those objects will get deleted anyway
-		Network.SetSendingEnabled(0, false);	
-		
-		// We need to stop receiving because first the level must be loaded first.
-		// Once the level is loaded, rpc's and other state update attached to objects in the level are allowed to fire
+		Network.SetSendingEnabled(0, false);
 		Network.isMessageQueueRunning = false;
-		
-		// All network views loaded from a level will get a prefix into their NetworkViewID.
-		// This will prevent old updates from clients leaking into a newly created scene.*/
+
 		Network.SetLevelPrefix(levelPrefix);
 		Application.LoadLevel(level);
-		
-		// Allow receiving data again
+
 		Network.isMessageQueueRunning = true;
 		// Now the level has been loaded and we can start sending out data to clients
 		Network.SetSendingEnabled(0, true);
-		
+	
 	}
 	
+	[RPC]
+	public void updateTeam(NetworkPlayer player, string team){
 
+		foreach(PlayerNode element in mpm.playerList){
+			if(element.networkPlayer == player){
+				element.team = team;
+				return;
+			}
+		}
+
+	}
+
+	[RPC]
+	public void sendPlayerName(string name, string team, NetworkMessageInfo info){
+		PlayerNode newEntry = new PlayerNode(name, info.sender, team);
+		mpm.playerList.Add(newEntry);
+	}
 
 	public void OnServerInitialized(){
-		PlayerNode newPlayer = new PlayerNode(playerName, Network.player);
-		playerList.Add(newPlayer);
-		networkView.RPC("sendPlayerName", RPCMode.OthersBuffered, playerName);
+		PlayerNode newPlayer = new PlayerNode(playerName, Network.player, "A");
+		mpm.playerList.Add(newPlayer);
+		networkView.RPC("sendPlayerName", RPCMode.OthersBuffered, playerName, "A");
 	}
 
 	public void OnConnectedToServer(){
-		PlayerNode newPlayer = new PlayerNode(playerName, Network.player);
-		playerList.Add(newPlayer);
-		networkView.RPC ("sendPlayerName", RPCMode.Server, playerName);
+		PlayerNode newPlayer = new PlayerNode(playerName, Network.player, "B");
+		mpm.playerList.Add(newPlayer);
+		networkView.RPC ("sendPlayerName", RPCMode.Server, playerName, "B");
 	}
-	
+
 	public void OnPlayerDisconnected(NetworkPlayer player) {
 		Debug.Log("Player disconnected from: " + player.ipAddress+":" + player.port);
-		playerList.Remove( GetPlayerNode(player) );
+		mpm.playerList.Remove( GetPlayerNode(player) );
 	}
 
 

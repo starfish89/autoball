@@ -12,15 +12,7 @@ public class spawnScript : MonoBehaviour {
 	List<Vector3> spawnPointListB = new List<Vector3>();
 
 	private Vector3 ballPosition = new Vector3(0,20,0);
-
-	// Use this for initialization
-	void Start () {
-
-	}
-
-	void Awake(){
 	
-	}
 
 	void Update(){
 		if(Input.GetKeyUp("e")){
@@ -77,14 +69,7 @@ public class spawnScript : MonoBehaviour {
 		Debug.Log("Clean up a bit after server quit");
 		Network.RemoveRPCs(Network.player);
 		Network.DestroyPlayerObjects(Network.player);
-		
-		/* 
-	* Note that we only remove our own objects, but we cannot remove the other players 
-	* objects since we don't know what they are; we didn't keep track of them. 
-	* In a game you would usually reload the level or load the main menu level anyway ;).
-	* 
-	* In fact, we could use "Application.LoadLevel(Application.loadedLevel);" here instead to reset the scene.
-	*/
+
 		Application.LoadLevel(Application.loadedLevel);
 	}
 }

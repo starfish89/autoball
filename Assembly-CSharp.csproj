@@ -51,15 +51,14 @@
      <Compile Include="Assets\Scripts\follow.cs" />
      <Compile Include="Assets\Scripts\gui\gameMenu.cs" />
      <Compile Include="Assets\Scripts\gui\guiMainMenu.cs" />
+     <Compile Include="Assets\Scripts\multiPlayerManager.cs" />
      <Compile Include="Assets\Scripts\multiPlayerScript.cs" />
+     <Compile Include="Assets\Scripts\screenshot.cs" />
      <Compile Include="Assets\Scripts\spawnScript.cs" />
-     <Compile Include="Assets\ball.cs" />
-     <Compile Include="Assets\screenshot.cs" />
+     <Compile Include="Assets\Scripts\torColliderScript.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{A40BE273-DA09-BDBC-5AD9-B0FE613547AC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
       <Project>{C6990D84-863F-EFA7-A167-818F45073ACD}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>

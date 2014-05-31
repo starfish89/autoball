@@ -9,15 +9,13 @@ Direct3D:
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
 Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.074 seconds
+- Completed reload, in  0.071 seconds
 desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -25,12 +23,10 @@ sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
 sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
+Connecting to 127.0.0.1:6666
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
 The tree Weeds_02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
  
 (Filename:  Line: 79)
@@ -39,34 +35,23 @@ The tree Shrub_03 must use the Nature/Soft Occlusion shader. Otherwise billboard
  
 (Filename:  Line: 79)
 
-UnloadTime: 0.515140 ms
+UnloadTime: 0.508905 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 2446.
-Total: 2.063187 ms (FindLiveObjects: 0.089575 ms CreateObjectMapping: 0.035764 ms MarkObjects: 0.241492 ms  DeleteObjects: 1.020109 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2487.
+Total: 2.551419 ms (FindLiveObjects: 0.115168 ms CreateObjectMapping: 0.054467 ms MarkObjects: 0.326145 ms  DeleteObjects: 1.199587 ms)
 
 Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityScript.Lang.dll (this message is harmless)
-sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
 Clean up a bit after server quit
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 8.391871 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2449.
-Total: 2.603265 ms (FindLiveObjects: 0.206384 ms CreateObjectMapping: 0.067919 ms MarkObjects: 0.521374 ms  DeleteObjects: 0.103356 ms)
-
-Can't send RPC function since no connection was started.
+Failed to send remove RPCs command to network
  
 (Filename:  Line: 2458)
 
-UnloadTime: 3.231277 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+Couldn't send RPC function '__RPCNetworkDestroy'
 
-Unloading 402 unused Assets to reduce memory usage. Loaded Objects now: 275.
-Total: 10.095117 ms (FindLiveObjects: 0.063326 ms CreateObjectMapping: 0.047576 ms MarkObjects: 0.425565 ms  DeleteObjects: 7.468227 ms)
+ 
+(Filename:  Line: 2458)
 
-sendto failed with code -1 for char 9 and length 1464.
-sendto failed with code -1 for char 9 and length 1464.
