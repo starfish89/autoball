@@ -51,18 +51,17 @@
      <Compile Include="Assets\Scripts\follow.cs" />
      <Compile Include="Assets\Scripts\gui\gameMenu.cs" />
      <Compile Include="Assets\Scripts\gui\guiMainMenu.cs" />
+     <Compile Include="Assets\Scripts\multiPlayerManager.cs" />
      <Compile Include="Assets\Scripts\multiPlayerScript.cs" />
-     <Compile Include="Assets\Scripts\spawnScript.cs" />
-     <Compile Include="Assets\ball.cs" />
-     <Compile Include="Assets\screenshot.cs" />
+     <Compile Include="Assets\Scripts\score.cs" />
+     <Compile Include="Assets\Scripts\screenshot.cs" />
+     <Compile Include="Assets\Scripts\spawn.cs" />
+     <Compile Include="Assets\torTeamA.cs" />
+     <Compile Include="Assets\uhr.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{A40BE273-DA09-BDBC-5AD9-B0FE613547AC}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,6 +7,7 @@ public class guiMainMenu : MonoBehaviour {
 
 	public GUISkin menuSkin ;
 	public GUISkin largeFont;
+	public GUISkin redFont;
     private multiPlayerScript multiPlayer;
 
 	private enum states : int { main, host, join, gameLobby};
@@ -22,6 +23,7 @@ public class guiMainMenu : MonoBehaviour {
 	private string connectIp = "127.0.0.1";
 	private int hostPort = 6666;
 	private int playerCount = 8;
+	private string team = "A";
 
 	private int windowWidth = 600;
 	private int windowHeight = 300;
@@ -37,7 +39,7 @@ public class guiMainMenu : MonoBehaviour {
         
         // vorherigen Player Namen holen
         playerName = PlayerPrefs.GetString("playerName");
-        
+		hostGameName = PlayerPrefs.GetString("gameName");
         // Multiplayer Script laden
         multiPlayer = GetComponent("multiPlayerScript") as multiPlayerScript;
 
@@ -125,10 +127,6 @@ public class guiMainMenu : MonoBehaviour {
 		GUILayout.Label("Player Name:", GUILayout.Width(150));
 		playerName = GUILayout.TextField(playerName);
 		GUILayout.EndHorizontal();
-
-		if(GUI.changed){
-			PlayerPrefs.SetString("playerName", playerName);
-		}
 		
 		GUILayout.BeginHorizontal();
 		GUILayout.Label("Game Name:", GUILayout.Width(150));
@@ -141,7 +139,9 @@ public class guiMainMenu : MonoBehaviour {
 		GUILayout.EndHorizontal();
 
 		GUILayout.BeginHorizontal();
-		GUILayout.Label("Map:", GUILayout.Width(150));
+		GUILayout.Label("Ip:", GUILayout.Width(150));
+
+		GUILayout.Label(Network.player.ipAddress);
 
 		GUILayout.EndHorizontal();
 
@@ -153,6 +153,11 @@ public class guiMainMenu : MonoBehaviour {
 		}
 		if(GUILayout.Button("Back", GUILayout.ExpandHeight(true))){
 			state = (int)states.main;
+		}
+
+		if(GUI.changed){
+			PlayerPrefs.SetString("playerName", playerName);
+			PlayerPrefs.SetString("gameName", hostGameName);
 		}
 	}
 	/// <summary>
@@ -241,28 +246,39 @@ public class guiMainMenu : MonoBehaviour {
 
 		GUILayout.BeginVertical();
 
-		GUILayout.BeginHorizontal();
-		GUILayout.Label("Game Name:", GUILayout.Width(150));
-		GUILayout.EndHorizontal();
-
 		scrollPosition = GUILayout.BeginScrollView (scrollPosition);
 
-		GUI.Box (new Rect(50,20,500,200), "Players");
+		GUI.Box (new Rect(0,20,600,100), "Players");
 
-		if(multiPlayer.playerList.Count>=1){
+		if(multiPlayer.mpm.playerList.Count>=1){
+
+			GUI.skin = redFont;
+
 
 			GUILayout.Space (50);
-			foreach (PlayerNode element in multiPlayer.playerList)
+			foreach (PlayerNode element in multiPlayer.mpm.playerList)
 			{
-				
+				string team;
+
 				GUILayout.BeginHorizontal();
 				GUILayout.Space(100);
-				GUILayout.Label(element.playerName);
+				GUILayout.Label(element.playerName + " - Team " + element.team);
+
+				if(element.networkPlayer == Network.player){
+					if(GUILayout.Button("Change Team")){
+						multiPlayer.networkView.RPC("updateTeam", RPCMode.OthersBuffered, element.networkPlayer, element.changeTeam());
+
+					}
+				}
+			
 				GUILayout.EndHorizontal();	
 			}
 			
 			
-		}		
+		}
+
+		GUI.skin = menuSkin;
+
 		GUILayout.EndScrollView ();
 
 		GUILayout.FlexibleSpace();
@@ -271,17 +287,15 @@ public class guiMainMenu : MonoBehaviour {
 			if(GUILayout.Button("Start", GUILayout.ExpandHeight(true))){
 				multiPlayer.loadLevel();
 			}
+		}
 
-			if(GUILayout.Button("Back", GUILayout.ExpandHeight(true))){
+		if(GUILayout.Button("Back", GUILayout.ExpandHeight(true))){
 			if(Network.isClient){
 				multiPlayer.disconnect();
 			} else {
 				multiPlayer.disconnectServer();
 			}
 			state = (int)states.main;
-		}
-
-	
 		}
 
 		GUILayout.EndVertical();

@@ -1,12 +1,18 @@
 Initialize engine version: 4.3.4f1 (e444f76e01cd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
+<<<<<<< HEAD
     Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.286]
     Renderer: NVIDIA GeForce GT 540M (Microsoft Corporation - WDDM v1.2)                                                                     
+=======
+    Version:  Direct3D 9.0c [nvd3dumx.dll 9.18.13.3788]
+    Renderer: NVIDIA GeForce GTX 560 Ti 
+>>>>>>> 0402e31023aae8edb271918f957d0eb4a8de58e3
     Vendor:   NVIDIA
     VRAM:     978 MB (via DXGI)
     Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Marco\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
@@ -19,6 +25,18 @@ Platform assembly: C:\Users\Marco\Documents\GitHub\autoball\autoball_Data\Manage
 Loading C:\Users\Marco\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 - Completed reload, in  0.162 seconds
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+=======
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.071 seconds
+desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
+>>>>>>> 0402e31023aae8edb271918f957d0eb4a8de58e3
 <RI> Initializing input.
 <RI> Input initialized.
 Failed to connect to master server at 67.225.180.24:23466
@@ -41,6 +59,7 @@ The tree Shrub_03 must use the Nature/Soft Occlusion shader. Otherwise billboard
  
 (Filename:  Line: 79)
 
+<<<<<<< HEAD
 UnloadTime: 1.081748 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
@@ -1466,22 +1485,33 @@ The server has disconnected from the client. Most likely the server has shut dow
  
 (Filename:  Line: 740)
 
+=======
+UnloadTime: 0.508905 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 2487.
+Total: 2.551419 ms (FindLiveObjects: 0.115168 ms CreateObjectMapping: 0.054467 ms MarkObjects: 0.326145 ms  DeleteObjects: 1.199587 ms)
+
+Platform assembly: C:\Users\klo\Documents\GitHub\autoball\autoball_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+>>>>>>> 0402e31023aae8edb271918f957d0eb4a8de58e3
 Clean up a bit after server quit
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-Couldn't send RPC function '__RPCNetworkDestroy'
-
+Failed to send remove RPCs command to network
  
 (Filename:  Line: 2458)
 
+<<<<<<< HEAD
 UnloadTime: 10.305861 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 481.
 Total: 3.045111 ms (FindLiveObjects: 0.055934 ms CreateObjectMapping: 0.034895 ms MarkObjects: 0.709191 ms  DeleteObjects: 0.175501 ms)
+=======
+Couldn't send RPC function '__RPCNetworkDestroy'
+>>>>>>> 0402e31023aae8edb271918f957d0eb4a8de58e3
 
-Can't send RPC function since no connection was started.
  
 (Filename:  Line: 2458)
 
