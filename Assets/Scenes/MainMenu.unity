@@ -1408,8 +1408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76116acda64842242ae9874731fdd5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPointListA: []
-  spawnPointListB: []
   playerPrefab: {fileID: 400050, guid: 4f61a0151edbe5645b25340b7cdafb5c, type: 2}
   ballPrefab: {fileID: 400002, guid: 12504edf5c5ca564392c9b135227e786, type: 2}
   cam: {fileID: 0}

@@ -53,9 +53,11 @@
      <Compile Include="Assets\Scripts\gui\guiMainMenu.cs" />
      <Compile Include="Assets\Scripts\multiPlayerManager.cs" />
      <Compile Include="Assets\Scripts\multiPlayerScript.cs" />
+     <Compile Include="Assets\Scripts\score.cs" />
      <Compile Include="Assets\Scripts\screenshot.cs" />
-     <Compile Include="Assets\Scripts\spawnScript.cs" />
-     <Compile Include="Assets\Scripts\torColliderScript.cs" />
+     <Compile Include="Assets\Scripts\spawn.cs" />
+     <Compile Include="Assets\torTeamA.cs" />
+     <Compile Include="Assets\uhr.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <ItemGroup>
